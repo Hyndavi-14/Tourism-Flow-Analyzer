@@ -33,8 +33,6 @@ Built a PostgreSQL database hosted on AWS RDS, supporting geospatial queries usi
 
 Designed and implemented ETL (Extract, Transform, Load) pipelines to clean, process, and load datasets into the database.
 
-Deployed the final application on AWS, ensuring scalability, accessibility, and reliability.
-
 Provided real-time analytics on visitor volume, YoY growth, and event-based spikes.
 
 

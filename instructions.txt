@@ -1,0 +1,20 @@
+To install the required libraries:
+pip install -r requirements.txt
+
+To run the project locally:
+# For example, if you are using Jupyter:
+jupyter notebook notebooks/EDA.ipynb
+
+If you are using VS Code:
+python etl/merge_and_clean.py
+
+Project Folder Structure:
+data/raw/        → All raw datasets
+data/cleaned/    → Cleaned and merged dataset
+notebooks/       → Contains EDA.ipynb (exploratory data analysis)
+etl/             → Scripts for merging and cleaning
+src/             → Source code for analysis or models
+assets/          → Images or static files
+
+To exit Jupyter or stop running:
+Ctrl + C

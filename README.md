@@ -20,8 +20,6 @@ To identify high and low tourism periods for better decision-making.
 
 To build an interactive dashboard where users can explore patterns through filters such as month, region, destination type, and event category.
 
-To deploy the entire project on a cloud-based environment for easy access and scalability.
-
 
 ## _Key Highlights:_
 
@@ -40,7 +38,7 @@ Provided real-time analytics on visitor volume, YoY growth, and event-based spik
 
 The system follows a structured multi-layered architecture consisting of:
 
-**Data Layer:** Raw datasets stored in AWS S3 and PostgreSQL (RDS) form the foundation for analysis.
+**Data Layer:** Raw datasets stored in PostgreSQL (RDS) form the foundation for analysis.
 
 **ETL Layer:** Data cleaning and transformation scripts prepare the data for loading into structured tables using Python and SQL.
 
@@ -48,8 +46,7 @@ The system follows a structured multi-layered architecture consisting of:
 
 **Visualization Layer:** Dash-based front-end interface that displays interactive visualizations such as maps, KPIs, heatmaps, and event impact charts.
 
-**Deployment Layer:** The project is hosted on AWS EC2 for accessibility and linked to AWS RDS for real-time data connectivity.
-
+**Deployment Layer:**
 
 ## _Tech Stack:_
 
@@ -63,7 +60,7 @@ Layer	Technology	Description
 
 **Database:**	PostgreSQL Relational + geospatial queries with PostGIS extension.
 
-**Cloud	AWS:** (RDS, S3)	Hosting, storage, compute.
+**Cloud	AWS:** 
 
 **Development Tools:** Visual Studio Code, Jupyter Notebook
 
@@ -96,7 +93,6 @@ The frontend is a Dash app featuring:
 **ETL Layer:** Python scripts running as ECS Tasks or Lambda jobs.
 
 **Database:** PostgreSQL (with PostGIS).
-
 
 **Deployment:** dashboard, GitHub Actions.
 

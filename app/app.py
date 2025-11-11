@@ -6,9 +6,9 @@ from dash import Dash, html, dcc
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 
-# =========================
+
 #  APP & THEME
-# =========================
+
 app = Dash(__name__, external_stylesheets=[dbc.themes.LUX], suppress_callback_exceptions=True)
 app.title = "Tourist Flow & Seasonality Analyzer"
 
@@ -25,9 +25,9 @@ CATEGORY_ORDER = {"lift": ["Normal", "Hotspot", "Off-Season"]}
 MAP_BG = "#223542"
 CORAL = "#F88379"  # Event Impact bar color
 
-# =========================
+
 #  PAGE SHELL / CSS
-# =========================
+
 app.index_string = """
 <!DOCTYPE html>
 <html>
@@ -159,9 +159,9 @@ app.index_string = """
 </html>
 """
 
-# =========================
+
 #  DATA
-# =========================
+
 np.random.seed(7)
 state_codes = ["AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY",
                "LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND",
@@ -207,9 +207,9 @@ REGIONS = {
 ALL_MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 YEARS = list(range(2010, 2025))
 
-# =========================
+
 #  FIGURE BUILDERS
-# =========================
+
 def _common_layout(fig):
     fig.update_layout(
         margin=dict(l=0, r=0, t=0, b=0),
@@ -301,9 +301,9 @@ def build_events(e):
     fig.update_layout(hoverlabel=dict(bgcolor="rgba(10,20,25,.9)", font_color="#ffffff"))
     return fig
 
-# =========================
+
 #  COMPONENTS
-# =========================
+
 sidebar_filters = dbc.Card(
     [
         html.Div("Filters", className="kpi-title mb-2"),
@@ -390,9 +390,9 @@ evt_card = dbc.Card(
     className="soft-card tight"
 )
 
-# =========================
+
 #  LAYOUT
-# =========================
+
 app.layout = dbc.Container(
     [
         dbc.Row(
@@ -423,9 +423,9 @@ app.layout = dbc.Container(
     style={"height":"100vh","overflow":"hidden"}
 )
 
-# =========================
+
 #  CALLBACKS — FIGURES
-# =========================
+
 @app.callback(
     [Output("us-map", "figure"),
      Output("heatmap", "figure"),
@@ -486,9 +486,9 @@ def update_all(month_val, region_val, dest_val, event_val):
 
     return map_out, heat_out, trend_out, evt_out
 
-# =========================
+
 #  CALLBACKS — KPIs (YoY color)
-# =========================
+
 @app.callback(
     [Output("kpi-visitors","children"),
      Output("kpi-spend","children"),
@@ -548,8 +548,9 @@ def update_kpis(month_val, region_val, dest_val, event_val):
 
     return visitors, spend, occ, yoy_text, yoy_style, top_event, top_impact, top_origin, str(peak_year)
 
-# =========================
+
 #  RUN
-# =========================
+
 if __name__ == "__main__":
     app.run(debug=True)
+

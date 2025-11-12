@@ -12,4 +12,5 @@ def get_engine():
     db   = os.getenv("PG_DB")
 
     url = f"postgresql+psycopg2://{user}:{pwd}@{host}:{port}/{db}"
+
     return create_engine(url, future=True)

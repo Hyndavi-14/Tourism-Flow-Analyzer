@@ -2,7 +2,7 @@
 -- TOURISM PROJECT: ANALYTICS VIEWS
 -- ===============================
 
--- 1) State x Month totals (for heatmaps)
+-- State x Month totals (for heatmaps)
 CREATE MATERIALIZED VIEW IF NOT EXISTS public.mv_state_month_visits AS
 SELECT
     state,
@@ -16,9 +16,7 @@ GROUP BY state, year, month;
 CREATE UNIQUE INDEX IF NOT EXISTS ux_mv_state_month_unique
 ON public.mv_state_month_visits (state, year, month);
 
--- -------------------------------------------
-
--- 2) Region x Month totals
+-- Region x Month totals
 CREATE MATERIALIZED VIEW IF NOT EXISTS public.mv_region_month_visits AS
 SELECT
     COALESCE(region, 'Unknown') AS region,
@@ -31,9 +29,7 @@ GROUP BY COALESCE(region, 'Unknown'), year, month;
 CREATE UNIQUE INDEX IF NOT EXISTS ux_mv_region_month_unique
 ON public.mv_region_month_visits (region, year, month);
 
--- -------------------------------------------
-
--- 3) Park yearly totals
+-- Park yearly totals
 CREATE MATERIALIZED VIEW IF NOT EXISTS public.mv_park_yearly_totals AS
 SELECT
     unit_code,
@@ -46,9 +42,7 @@ GROUP BY unit_code, park, year;
 CREATE UNIQUE INDEX IF NOT EXISTS ux_mv_park_yearly_unique
 ON public.mv_park_yearly_totals (unit_code, year);
 
--- -------------------------------------------
-
--- 4) Year-over-Year growth (%)
+-- Year-over-Year growth (%)
 CREATE MATERIALIZED VIEW IF NOT EXISTS public.mv_park_yoy AS
 WITH base AS (
     SELECT unit_code, park, year, SUM(recreation_visits) AS visits_year
@@ -78,7 +72,6 @@ FROM yoy;
 CREATE UNIQUE INDEX IF NOT EXISTS ux_mv_park_yoy_unique
 ON public.mv_park_yoy (unit_code, year);
 
--- -------------------------------------------
 
 -- REFRESH COMMANDS (run manually after loading new data)
 -- REFRESH MATERIALIZED VIEW CONCURRENTLY public.mv_state_month_visits;
@@ -86,7 +79,7 @@ ON public.mv_park_yoy (unit_code, year);
 -- REFRESH MATERIALIZED VIEW CONCURRENTLY public.mv_park_yearly_totals;
 -- REFRESH MATERIALIZED VIEW CONCURRENTLY public.mv_park_yoy;
 
--- ===============================
 -- END OF FILE
--- ===============================
+
+
 

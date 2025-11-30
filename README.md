@@ -46,7 +46,6 @@ The system follows a structured multi-layered architecture consisting of:
 
 **Visualization Layer:** Dash-based front-end interface that displays interactive visualizations such as maps, KPIs, heatmaps, and event impact charts.
 
-**Deployment Layer:**
 
 ## _Tech Stack:_
 

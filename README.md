@@ -7,7 +7,7 @@ The Tourist Flow & Seasonality Analyzer with Event Impact is a data analytics an
 
 This dashboard-based project combines data engineering, statistical analysis, and interactive visual storytelling to uncover patterns in tourist behavior and evaluate how festivals or large-scale events influence travel patterns and tourism-based economies.
 
-The system integrates multiple reliable U.S. datasets (TSA, NPS, Hotel Occupancy, Event Calendars) and provides interactive dashboards with real-time hotspot/off-season maps.
+The system integrates multiple reliable U.S. datasets (NPS, Hotel Occupancy, Event Calendars) and provides interactive dashboards with real-time hotspot/off-season maps.
 
 
 ## _Objectives:_
@@ -25,9 +25,9 @@ To build an interactive dashboard where users can explore patterns through filte
 
 Developed a fully interactive dashboard using Plotly Dash with modern UI design and dynamic visual components.
 
-Integrated multiple datasets such as TSA checkpoint travel data, National Park Service visits, hotel occupancy rates, and event calendars.
+Integrated multiple datasets such as checkpoint travel data, National Park Service visits, hotel occupancy rates, and event calendars.
 
-Built a PostgreSQL database hosted on AWS RDS, supporting geospatial queries using PostGIS.
+Built a PostgreSQL database, supporting geospatial queries using PostGIS.
 
 Designed and implemented ETL (Extract, Transform, Load) pipelines to clean, process, and load datasets into the database.
 
@@ -59,8 +59,6 @@ Layer	Technology	Description
 **Visualization:**	Plotly, Dash Bootstrap Components (interactive charts & maps).
 
 **Database:**	PostgreSQL Relational + geospatial queries with PostGIS extension.
-
-**Cloud	AWS:** 
 
 **Development Tools:** Visual Studio Code, Jupyter Notebook
 
@@ -118,7 +116,7 @@ These findings support strategic planning for marketing campaigns, event managem
 
 **Phase 1	(Week 2):**	Final architecture, schema design, seed data.
 
-**Phase 2	(Week 3):**	Dataset collection, load TSA/NPS data into Postgres.
+**Phase 2	(Week 3):**	Dataset collection, load NPS data into Postgres.
 
 **Phase 3	(Week 4):**	data cleaning + processing, Backend Process
 
@@ -187,5 +185,5 @@ Strategize marketing campaigns around event-driven spikes.
 
 ## _Summary:_
 
-This project demonstrates the complete life cycle of a real-world data analytics solution — from data collection and cleaning to visualization and cloud deployment.
+This project demonstrates the complete life cycle of a real-world data analytics solution — from data collection and cleaning to visualization.
 It transforms raw datasets into an insightful, interactive, and business-ready dashboard that helps understand tourism dynamics and event-driven behavior, showcasing the power of data analytics in shaping smarter tourism strategies.

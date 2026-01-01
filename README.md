@@ -109,23 +109,6 @@ The frontend is a Dash app featuring:
 These findings support strategic planning for marketing campaigns, event management, and regional tourism development.
 
 
-## _Future Roadmap: Sprints / Phases_
-
-**Phase	Week Deliverables**
-
-**Phase 1	(Week 2):**	Final architecture, schema design, seed data.
-
-**Phase 2	(Week 3):**	Dataset collection, load NPS data into Postgres.
-
-**Phase 3	(Week 4):**	data cleaning + processing, Backend Process
-
-**Phase 4	(Week 5):**	Integrate event datasets, event impact analytics (EDA + metrics).
-
-**Phase 5	(Week 6):**	Interactive map filters, drilldowns, QA dashboard.
-
-**Phase 6	(Week 7):**	working on dashboard prototype, optimize performance
-
-**Phase 7	(Week 8):**	Testing, Final demo, final report submission, presentation.
 
 
 ## _How the Project Works:_
@@ -179,7 +162,6 @@ Strategize marketing campaigns around event-driven spikes.
 
 **Track:** Data Analytics Capstone Project
 
-**Duration:** 8 Weeks
 
 
 ## _Summary:_
